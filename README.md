@@ -1,8 +1,18 @@
 Prerequisite:
-1> Install Python
-2> Install Selenium
-3> Install Behave
 
+1. Install Python
+https://www.python.org/downloads/
+
+2. Pycharm IDE
+https://www.jetbrains.com/pycharm/download/#section=mac
+
+3.Selenium library
+pip install selenium
+
+4. Behave
+pip install behave 
+OR 
+pip install -U behave
 
 To run Add user test:
 1. Open terminal window
