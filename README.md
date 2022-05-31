@@ -6,7 +6,7 @@ https://www.python.org/downloads/
 2. Pycharm IDE
 https://www.jetbrains.com/pycharm/download/#section=mac
 
-3.Selenium library
+3. Selenium library
 pip install selenium
 
 4. Behave

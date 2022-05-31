@@ -21,17 +21,9 @@ def open_webpage(context):
 def delete_user(context):
     context.rows = (len(context.driver.find_elements(By.XPATH, '/html[1]/body[1]/table[1]/tbody[1]/tr')))
 
-    # print(">> Before delete total users:: " + str(context.rows))
-    # columns = (len(context.driver.find_elements(By.XPATH, '/html[1]/body[1]/table[1]/tbody[1]/tr/td')))
-    # print(columns)
-
     for row in range(1, context.rows):
-        # for column in range(1, 9): print(driver.find_element(By.XPATH, "/html[1]/body[1]/table[1]/tbody[1]/tr["+str(
-        # row)+"]/td["+str(column)+"]").text)
-
         username = context.driver.find_element(By.XPATH,
                                                "/html[1]/body[1]/table[1]/tbody[1]/tr[" + str(row) + "]/td[3]").text
-        print(username.lower())
         if username.lower() == "novak":
             context.driver.find_element(By.XPATH,
                                         "/html[1]/body[1]/table[1]/tbody[1]/tr[" + str(
@@ -46,8 +38,4 @@ def delete_user(context):
 def success(context):
     total_rows = (len(context.driver.find_elements(By.XPATH, '/html[1]/body[1]/table[1]/tbody[1]/tr')))
     assert context.rows > total_rows
-
-    # print(">> After delete total users:: " + str(total_rows))
-    # if context.rows > total_rows:
-    #     print(">> Novak user is deleted successfully!")
     sleep(5)
